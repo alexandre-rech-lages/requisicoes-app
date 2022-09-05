@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/4dd68f48-b2cd-4aaa-82fe-0fdddbf7d7fd/microsoft.web/sites/subscriptions/4dd68f48-b2cd-4aaa-82fe-0fdddbf7d7fd/resourceGroups/requisicoes-app/providers/Microsoft.Web/sites/requisicoes-app",
+  "appService.deploySubpath": "dist"
+}

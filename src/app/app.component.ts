@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'requisicoes-app';
+
+  escreverNoConsole() : void{
+    console.log('botão foi clicado');
+  }
+
 }

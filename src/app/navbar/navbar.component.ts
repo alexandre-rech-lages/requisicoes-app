@@ -1,0 +1,35 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import firebase from 'firebase/compat/app';
+import { AuthenticationService } from '../auth/services/authentication.service';
+import { Router } from '@angular/router';
+
+
+@Component({
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
+})
+export class NavbarComponent implements OnInit {
+
+  public usuarioLogado : Observable<firebase.User | null>;
+  public estaColapsada: boolean = false;
+  private authService: AuthenticationService;
+  private router: Router;
+
+  constructor(authService: AuthenticationService, router: Router) {
+    this.authService=authService;
+    this.router=router;
+  }
+
+  ngOnInit(): void {
+    this.usuarioLogado = this.authService.usuarioLogado;
+  }
+
+  public sair(){
+    this.authService.logout()
+    .then(() => {
+      this.router.navigate(['/login']);
+    })
+  }
+}

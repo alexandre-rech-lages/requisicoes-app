@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-color{
+  background-color: #f3f3f3 !important;
+}
+
+bg.light{
+  background-color: #ffffff;
+}
+
+.links{
+  font-size: 17px;
+}
+
+.nav-link:hover{
+  color: #093679 !important;
+}
+
+td,th {
+  vertical-align: middle !important;
+}
+
+table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
